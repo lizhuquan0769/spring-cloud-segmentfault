@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.segmentfault</groupId>
-	<artifactId>spring-cloud-lesson-4-eureka-client</artifactId>
+	<artifactId>spring-cloud-lesson-4-config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-cloud-lesson-4-eureka-client</name>
+	<name>spring-cloud-lesson-4-config-server</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -36,11 +36,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 
 		<dependency>
