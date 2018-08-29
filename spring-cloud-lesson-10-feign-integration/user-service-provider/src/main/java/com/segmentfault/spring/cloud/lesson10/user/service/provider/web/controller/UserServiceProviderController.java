@@ -33,12 +33,26 @@ public class UserServiceProviderController implements UserService {
         return userService.saveUser(user);
     }
 
+    /**
+     * 增加超时处理
+     * @return
+     */
+    @HystrixCommand(
+            commandProperties = {
+                    // 设置超时时间100毫秒
+                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "100")
+            },
+            // 设置fallback方法
+            fallbackMethod = "fallbackForGetUsers"
+    )
     @Override
     public List<User> findAll() {
         return userService.findAll();
     }
 
-
+    public List<User> fallbackForGetUsers() {
+        return Collections.EMPTY_LIST;
+    }
 
     /**
      * 增加超时处理
@@ -62,10 +76,5 @@ public class UserServiceProviderController implements UserService {
 
         return userService.findAll();
     }
-    public List<User> fallbackForGetUsers() {
-        return Collections.EMPTY_LIST;
-    }
-
-
 }
 

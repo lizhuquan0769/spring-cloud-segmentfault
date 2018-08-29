@@ -6,26 +6,15 @@
         <artifactId>spring-cloud-lesson-10-feign-integration</artifactId>
         <groupId>com.segmentfault</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>user-service-provider</artifactId>
+    <artifactId>eureka-server</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.segmentfault</groupId>
-            <artifactId>user-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
     </dependencies>
 </project>
